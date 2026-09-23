@@ -1,0 +1,69 @@
+{
+  "PERMISSIONS": {
+    "DASHBOARD": "DASHBOARD",
+    "FILE": "FILE",
+    "ROOM": "ROOM",
+    "FILETRANSACTION": "FILETRANSACTION",
+    "HOUSE": "HOUSE",
+    "RACK": "RACK",
+    "SHELF": "SHELF",
+    "USER": "USER"
+  },
+  "CAPABILITIES": {
+    "READ": "READ",
+    "WRITE": "WRITE",
+    "UPDATE": "UPDATE",
+    "DELETE": "DELETE",
+    "EXPORT": "EXPORT"
+  },
+  "USER_ROLES": {
+    "SUPER_ADMIN": {
+      "permissions": {
+        "DASHBOARD": ["READ", "WRITE", "UPDATE", "DELETE"],
+        "FILE": ["READ", "WRITE", "UPDATE", "DELETE", "EXPORT"],
+        "ROOM": ["READ", "WRITE", "UPDATE", "DELETE"],
+        "FILETRANSACTION": ["READ", "WRITE", "UPDATE", "DELETE"],
+        "HOUSE": ["READ", "WRITE", "UPDATE", "DELETE"],
+        "RACK": ["WRITE", "READ", "UPDATE", "DELETE"],
+        "SHELF": ["WRITE", "READ", "UPDATE", "DELETE"],
+        "USER": ["READ", "WRITE", "UPDATE", "DELETE"]
+      }
+    },
+    "ADMIN": {
+      "permissions": {
+        "DASHBOARD": ["READ", "WRITE", "UPDATE", "DELETE"],
+        "FILE": ["READ", "WRITE", "UPDATE", "DELETE", "EXPORT"],
+        "ROOM": ["READ", "WRITE", "UPDATE", "DELETE"],
+        "FILETRANSACTION": ["READ", "WRITE", "UPDATE", "DELETE"],
+        "HOUSE": ["READ", "WRITE", "UPDATE", "DELETE"],
+        "RACK": ["WRITE", "READ", "UPDATE", "DELETE"],
+        "SHELF": ["WRITE", "READ", "UPDATE", "DELETE"],
+        "USER": ["READ", "WRITE"]
+      }
+    },
+    "RECORD_KEEPER": {
+      "permissions": {
+        "DASHBOARD": ["READ"],
+        "FILE": ["READ", "WRITE", "UPDATE", "EXPORT"],
+        "ROOM": ["READ", "WRITE", "UPDATE"],
+        "FILETRANSACTION": ["READ", "WRITE", "UPDATE"],
+        "HOUSE": ["READ", "WRITE", "UPDATE"],
+        "RACK": ["WRITE", "READ", "UPDATE"],
+        "SHELF": ["WRITE", "READ", "UPDATE"],
+        "USER": []
+      }
+    },
+    "VIEWER": {
+      "permissions": {
+        "DASHBOARD": ["READ"],
+        "FILE": ["READ"],
+        "ROOM": ["READ"],
+        "FILETRANSACTION": ["READ"],
+        "HOUSE": ["READ"],
+        "RACK": ["READ"],
+        "SHELF": ["READ"],
+        "USER": []
+      }
+    }
+  }
+}
